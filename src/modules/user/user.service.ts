@@ -1,7 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { UserDTO } from './user.dto';
+import { CreateUserDTO } from './DTOS/create-user.dto';
 import { PrismaService } from 'src/database/prisma.service';
 import { HashingService } from 'src/utils/hashing.service';
+import { UpdateUserDTO } from './DTOS/update-user.dto';
+import { ReadUserDTO } from './DTOS/read-user.dto';
+import { messagensHelper } from 'src/helpers/messagens.helper';
 
 @Injectable()
 export class UserService {
@@ -10,28 +13,24 @@ export class UserService {
     private readonly hashing: HashingService,
   ) {}
 
-  async create(data: UserDTO) {
+  async create(data: CreateUserDTO): Promise<ReadUserDTO> {
     const hashing = this.hashing.hashPassword(data.password);
-    const user = this.prisma.user.create({
+    const userDTO = this.prisma.user.create({
       data: {
         ...data,
         password: hashing,
       },
     });
 
-    return await user;
+    return await userDTO;
   }
 
-  async findAll(): Promise<UserDTO[]> {
-    try {
-      return await this.prisma.user.findMany();
-    } catch {
-      throw new Error('no user found');
-    }
+  async findAll(): Promise<ReadUserDTO[]> {
+    return await this.prisma.user.findMany();
   }
 
   async UserIsInDb(id: string): Promise<boolean> {
-    const user = this.prisma.user.findUnique({
+    const user = await this.prisma.user.findUnique({
       where: {
         userId: id,
       },
@@ -40,17 +39,30 @@ export class UserService {
     return user ? true : false;
   }
 
-  async findById(id: string): Promise<UserDTO | string> {
-    const user = this.prisma.user.findUnique({
+  async findById(id: string): Promise<ReadUserDTO | string> {
+    const user = await this.prisma.user.findUnique({
       where: {
         userId: id,
       },
     });
+    try {
+      return user;
+    } catch (error) {
+      console.log(error);
+      throw new Error(messagensHelper.NOT_FOUND_USER);
+    }
+  }
 
+  async findByEmail(email: string): Promise<ReadUserDTO> {
+    const user = await this.prisma.user.findUnique({
+      where: {
+        email: email,
+      },
+    });
     return user;
   }
 
-  async update(id: string, data: UserDTO) {
+  async update(id: string, data: UpdateUserDTO): Promise<ReadUserDTO> {
     if (this.UserIsInDb(id)) {
       const hashing = this.hashing.hashPassword(data.password);
       return await this.prisma.user.update({
@@ -63,10 +75,10 @@ export class UserService {
         },
       });
     }
-    throw new Error('user doesnt exits');
+    throw new Error(messagensHelper.NOT_FOUND_USER);
   }
 
-  async delete(id: string) {
+  async delete(id: string): Promise<ReadUserDTO> {
     const user = this.findById(id);
     if (user) {
       return await this.prisma.user.delete({
@@ -74,6 +86,8 @@ export class UserService {
           userId: id,
         },
       });
+    } else {
+      throw new Error(messagensHelper.DELETE_USER);
     }
   }
 }
