@@ -1,45 +1,65 @@
-# SELF - STUDY API
+# User API
 
 ## Desenvolvedor
 - <a href="https://www.linkedin.com/in/yago-ara%C3%BAjo-do-vale-moreira-461816247/">Yago Araújo</a>
 
 ## 📝 Descrição
 
-Self - Study API é o formato de comunição backend criado para a plataforma Self Study, a qual controla os seguintes módulos: tutors, students e lessons.
+User API é o backend utilizado para transportar dados gerais dos usuários de maneira simples e segura.
 
 
 ## 📁 Estrutura de pastas
 
-|--> Apresentacoes<br>
-|--> Documentos<br>
-|--> imagens<br>
+|--> prisma<br>
+&emsp;|--> migrations<br>
+|--> schema<br>
 |--> src<br>
-&emsp;|--> Circuito<br>
+&emsp;|--> auth<br>
+&emsp;|--> migrations<br>
+&emsp;|--> database<br>
+&emsp;|--> helpers<br>
+&emsp;|--> modules<br>
+&emsp;|--> utils<br>
 | readme.md<br>
 | license.txt
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
-- <b>Apresentacoes</b>: Pasta com os arquivos em pdf de todas as apresentações do grupo.
+- <b>prisma</b>: arquivos do ORM prisma para modelagem de entidades e suas migrations.
 
-- <b>Documentos</b>: Aqui estarão todos os documentos do projeto. 
-
-- <b>imagens</b>: Pasta com as imagens usadas no projeto.
+- <b>schema</b>: modelagem do banco de dados SQL usado no projeto. 
 
 - <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto.
 
+- <b>.env.example</b>: Arquivo que ilusta quais são os tipos de variáveis de ambiente usadas.
+
+- <b>.eslintrc.js</b>: Arquivo que é usado para configurar as regras e as opções de linting do ESLint.
+
+- <b>.gitignore</b>: Arquivo usado para sinalizar arquivos que não devem ser versionados.
+
+- <b>.prettierrc</b>: Arquivo de configuração do Prettier.
+ 
 - <b>readme.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- <b>license.txt</b>: Arquivo com a licença de uso dos produtores do projeto.
+- <b>nest-cli.json</b>: Arquivo de configuração para a CLI do Nest, onde são definidas configurações específicas para o projeto.
+
+- <b>package-lock.json</b>: Arquivo que marca o gerenciador de pacotes npm.
+
+- <b>package.json</b>: Arquivo de manifesto do Node.js, que contém as informações sobre o projeto, suas dependências, scripts e outras configurações relacionadas ao gerenciamento de pacotes.
+
+- <b>tsconfig.build.json</b>: Arquivo de configuração do TypeScript usado para a compilação do projeto em produção. 
+
+- <b>tsconfig.json</b>: Arquivo de configuração do TypeScript, que define as opções e as configurações do compilador do TypeScript para o projeto.
+  
 
 ## 💻 Execução dos projetos
 
 O conteúdo do documento "Manual de Instruções" que serve como guia para a execução deste projeto está disponível na pasta "documentos". Alternativamente, é possível acessá-lo através desse link: <https://github.com/2023M4T5-Inteli/Projeto2/blob/main/Documentos/T5_G2_V1_Instruction_Manual.pdf/>
 
-## 🗃 Tecnologias Usadas
+## 🧑‍💻 Tecnologias Usadas
 - Typescript
 - NestJS
-- JWT e OAuth 2.0
+- JWT 
 - MySql
 - PrismaIO
     
