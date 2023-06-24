@@ -54,7 +54,30 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 ## 💻 Execução dos projetos
 
-O conteúdo do documento "Manual de Instruções" que serve como guia para a execução deste projeto está disponível na pasta "documentos". Alternativamente, é possível acessá-lo através desse link: <https://github.com/2023M4T5-Inteli/Projeto2/blob/main/Documentos/T5_G2_V1_Instruction_Manual.pdf/>
+# Pré-requisitos
+
+Antes de começar a utilizar o projeto, certifique-se de ter os seguintes softwares instalados em sua máquina:
+
+- [Node.js](https://nodejs.org) versão 12 ou superior
+- [npm](https://www.npmjs.com/) (geralmente vem instalado com o Node.js)
+
+# Inicialização
+
+Siga os passos abaixo para iniciar o projeto:
+
+1. Faça o clone deste repositório para o seu ambiente local.
+
+2. No diretório raiz do projeto, execute o seguinte comando para instalar as dependências necessárias:
+
+   ```shell
+   npm install
+   ```
+3. Após a conclusão da instalação das dependências, execute o seguinte comando para iniciar o servidor de desenvolvimento:
+   ```shell
+   npm run start:dev
+   ```
+4. Agora, você pode acessar o aplicativo pela seguinte url: http://localhost:3000.
+
 
 ## 🧑‍💻 Tecnologias Usadas
 - Typescript
