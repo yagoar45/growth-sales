@@ -1,73 +1,56 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# SELF - STUDY API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Desenvolvedor
+- <a href="https://www.linkedin.com/in/yago-ara%C3%BAjo-do-vale-moreira-461816247/">Yago Araújo</a>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 📝 Descrição
 
-## Description
+Self - Study API é o formato de comunição backend criado para a plataforma Self Study, a qual controla os seguintes módulos: tutors, students e lessons.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## 📁 Estrutura de pastas
 
-```bash
-$ npm install
-```
+|--> Apresentacoes<br>
+|--> Documentos<br>
+|--> imagens<br>
+|--> src<br>
+&emsp;|--> Circuito<br>
+| readme.md<br>
+| license.txt
 
-## Running the app
+Dentre os arquivos presentes na raiz do projeto, definem-se:
 
-```bash
-# development
-$ npm run start
+- <b>Apresentacoes</b>: Pasta com os arquivos em pdf de todas as apresentações do grupo.
 
-# watch mode
-$ npm run start:dev
+- <b>Documentos</b>: Aqui estarão todos os documentos do projeto. 
 
-# production mode
-$ npm run start:prod
-```
+- <b>imagens</b>: Pasta com as imagens usadas no projeto.
 
-## Test
+- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto.
 
-```bash
-# unit tests
-$ npm run test
+- <b>readme.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-# e2e tests
-$ npm run test:e2e
+- <b>license.txt</b>: Arquivo com a licença de uso dos produtores do projeto.
 
-# test coverage
-$ npm run test:cov
-```
+## 💻 Execução dos projetos
 
-## Support
+O conteúdo do documento "Manual de Instruções" que serve como guia para a execução deste projeto está disponível na pasta "documentos". Alternativamente, é possível acessá-lo através desse link: <https://github.com/2023M4T5-Inteli/Projeto2/blob/main/Documentos/T5_G2_V1_Instruction_Manual.pdf/>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## 🗃 Tecnologias Usadas
+- Typescript
+- NestJS
+- JWT e OAuth 2.0
+- MySql
+- PrismaIO
+    
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 📋 Licença/License
 
-## License
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO AUTORAL</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Yago Araújo</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
-Nest is [MIT licensed](LICENSE).
+## 🎓 Referências
+
+Aqui estão as referências usadas no projeto:
+
+1. <https://creativecommons.org/share-your-work/>
