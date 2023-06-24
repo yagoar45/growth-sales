@@ -19,4 +19,6 @@ export class CreateUserDTO {
   @IsNotEmpty()
   @IsStrongPassword()
   password: string;
+  
+  tutor: string;
 }
